@@ -1,0 +1,2 @@
+# Because we don't want to git push the venv.
+.venv
