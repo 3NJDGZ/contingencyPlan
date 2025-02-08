@@ -10,7 +10,9 @@ client = MongoClient(connectionString)
 db = client.get_database("chatdb")
 messages = db.messages
 
-st.markdown("# Main page")
-
-st.text_input("Username", key="username")
-st.text_input("Password", key="password")
+st.set_page_config(layout="wide", page_title="Chat App")
+st.markdown("# Login")
+left, right = st.columns(2)
+with left:
+    st.text_input("Username", key="username")
+    st.text_input("Password", key="password")
